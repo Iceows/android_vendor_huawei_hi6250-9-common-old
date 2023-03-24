@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Config>
+    <night_iso>3000</night_iso>
+    <night_exposure>17</night_exposure>
+    <night_lumaavg>15</night_lumaavg>
+    <zoom_ratio_max>1.5</zoom_ratio_max>
+
+    <ImageRegistrationMethod>1</ImageRegistrationMethod>
+
+    <GhostRemovalMethod>1</GhostRemovalMethod>
+    <LocalMotionDetection>
+        <MotionLowGray>10</MotionLowGray>
+        <MotionHighGray>20</MotionHighGray>
+        <MotionRatio>2.0</MotionRatio>
+    </LocalMotionDetection>
+
+    <DarkMotionDetection>
+        <Thresh1>
+            <ISO>160</ISO>
+            <MotionLowGray>10</MotionLowGray>
+            <MotionHighGray>20</MotionHighGray>
+            <MotionRatio>2.0</MotionRatio>
+        </Thresh1>
+        <Thresh2>
+            <ISO>240</ISO>
+            <MotionLowGray>10</MotionLowGray>
+            <MotionHighGray>20</MotionHighGray>
+            <MotionRatio>2.0</MotionRatio>
+        </Thresh2>
+        <Thresh3>
+            <ISO>320</ISO>
+            <MotionLowGray>10</MotionLowGray>
+            <MotionHighGray>20</MotionHighGray>
+            <MotionRatio>2.0</MotionRatio>
+        </Thresh3>
+        <Thresh4>
+            <ISO>640</ISO>
+            <MotionLowGray>10</MotionLowGray>
+            <MotionHighGray>20</MotionHighGray>
+            <MotionRatio>2.0</MotionRatio>
+        </Thresh4>
+        <Thresh5>
+            <ISO>960</ISO>
+            <MotionLowGray>10</MotionLowGray>
+            <MotionHighGray>20</MotionHighGray>
+            <MotionRatio>2.0</MotionRatio>
+        </Thresh5>
+        <Thresh6>
+            <ISO>1280</ISO>
+            <MotionLowGray>15</MotionLowGray>
+            <MotionHighGray>25</MotionHighGray>
+            <MotionRatio>2.0</MotionRatio>
+        </Thresh6>
+        <Thresh7>
+            <ISO>1600</ISO>
+            <MotionLowGray>20</MotionLowGray>
+            <MotionHighGray>30</MotionHighGray>
+            <MotionRatio>2.0</MotionRatio>
+        </Thresh7>
+        <Thresh8>
+            <ISO>1920</ISO>
+            <MotionLowGray>25</MotionLowGray>
+            <MotionHighGray>35</MotionHighGray>
+            <MotionRatio>2.0</MotionRatio>
+        </Thresh8>
+        <Thresh9>
+            <ISO>2560</ISO>
+            <MotionLowGray>30</MotionLowGray>
+            <MotionHighGray>40</MotionHighGray>
+            <MotionRatio>1.5</MotionRatio>
+        </Thresh9>
+        <Thresh10>
+            <ISO>6400</ISO>
+            <MotionLowGray>30</MotionLowGray>
+            <MotionHighGray>50</MotionHighGray>
+            <MotionRatio>1.0</MotionRatio>
+        </Thresh10>
+    </DarkMotionDetection>
+
+    <PureColorMotionDetection>
+        <MotionRatio>0.2</MotionRatio>
+    </PureColorMotionDetection>
+    <LocalMotionCorrection>3</LocalMotionCorrection>
+
+    <ImageFusionMethod>1</ImageFusionMethod>
+    <ImageFusion>
+        <MinDarkWeight>-1.0</MinDarkWeight>
+        <MinBrightWeight>-1.0</MinBrightWeight>
+        <MaxBrightWeight>1.0</MaxBrightWeight>
+        <MaxDarkWeight>1.0</MaxDarkWeight>
+        <PyramidTopSize>2</PyramidTopSize>
+        <WeightCalcMethod>1</WeightCalcMethod>
+        <MinUnderExposureDiv>32</MinUnderExposureDiv>
+        <MaxUnderExposureDiv>96</MaxUnderExposureDiv>
+        <MinOverExposureDiv>176</MinOverExposureDiv>
+        <MaxOverExposureDiv>226</MaxOverExposureDiv>
+        <BlendCenter>128</BlendCenter>
+        <BlendSigma>0.1</BlendSigma>
+    </ImageFusion>
+
+    <PostProcessValid>1</PostProcessValid>
+    <PostProcess>
+        <DenoiseDarkThresh>255</DenoiseDarkThresh>
+    </PostProcess>
+
+    <FlashHDR>
+        <PyramidTopSize>16</PyramidTopSize>
+        <WeightCalcMethod>0</WeightCalcMethod>
+        <BlendCenter>128</BlendCenter>
+        <BlendSigma>0.2</BlendSigma>
+        <NoFlashWeight>128</NoFlashWeight>
+    </FlashHDR>
+
+    <Face>
+        <AjustRatio>255</AjustRatio>
+        <Margin>10</Margin>
+        <SmoothRadius>40</SmoothRadius>
+    </Face>
+
+    <PreMotionDetection>
+        <MotionLowGray>10</MotionLowGray>
+        <MotionHighGray>20</MotionHighGray>
+        <MotionRatio>5.0</MotionRatio>
+    </PreMotionDetection>
+</Config>
