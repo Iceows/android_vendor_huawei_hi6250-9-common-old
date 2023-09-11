@@ -1478,6 +1478,26 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+	name: "vendor.huawei.hardware.perfgenius@2.0",
+	owner: "huawei",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/vendor.huawei.hardware.perfgenius@2.0.so"],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/vendor.huawei.hardware.perfgenius@2.0.so"],
+		},
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
 	name: "libpf_customize_hisi",
 	owner: "huawei",
 	strip: {
@@ -2340,17 +2360,17 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "vendor.huawei.hardware.perfgenius@2.0",
+	name: "vendor.huawei.hardware.perfgenius@2.0-impl",
 	owner: "huawei",
 	strip: {
 		none: true,
 	},
 	target: {
 		android_arm: {
-			srcs: ["proprietary/vendor/lib/vendor.huawei.hardware.perfgenius@2.0.so"],
+			srcs: ["proprietary/vendor/lib/hw/vendor.huawei.hardware.perfgenius@2.0-impl.so"],
 		},
 		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/vendor.huawei.hardware.perfgenius@2.0.so"],
+			srcs: ["proprietary/vendor/lib64/hw/vendor.huawei.hardware.perfgenius@2.0-impl.so"],
 		},
 	},
 	compile_multilib: "both",
@@ -2358,6 +2378,47 @@ cc_prebuilt_library_shared {
 	prefer: true,
 	soc_specific: true,
 }
+
+cc_prebuilt_library_shared {
+	name: "libperfhub",
+	owner: "huawei",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libperfhub.so"],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libperfhub.so"],
+		},
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libperfhub_service",
+	owner: "huawei",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libperfhub_service.so"],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libperfhub_service.so"],
+		},
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
 
 cc_prebuilt_library_shared {
 	name: "vendor.huawei.hardware.radio.chr@1.0",
@@ -2477,14 +2538,14 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "audio.primary.hi6250",
+	name: "audio.primary_hisi.hi6250",
 	owner: "huawei",
 	strip: {
 		none: true,
 	},
 	target: {
 		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/hw/audio.primary.hi6250.so"],
+			srcs: ["proprietary/vendor/lib64/hw/audio.primary_hisi.hi6250.so"],
 		},
 	},
 	compile_multilib: "64",
@@ -3683,6 +3744,19 @@ cc_prebuilt_binary {
 	name: "vendor.huawei.hardware.sensors@1.0-service",
 	owner: "huawei",
 	srcs: ["proprietary/vendor/bin/hw/vendor.huawei.hardware.sensors@1.0-service"],
+	check_elf_files: false,
+	strip: {
+		none: true,
+	},
+	relative_install_path: "hw",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_binary {
+	name: "vendor.huawei.hardware.perfgenius@2.0-service",
+	owner: "huawei",
+	srcs: ["proprietary/vendor/bin/hw/vendor.huawei.hardware.perfgenius@2.0-service"],
 	check_elf_files: false,
 	strip: {
 		none: true,

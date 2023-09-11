@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--   eas:
+    <perf_group name="top_app" group_id="0">
+        <perf_operation>
+            <type>0</type>
+            <value>40</value>
+        </perf_operation>
+    </perf_group>
+    <perf_group name="boost" group_id="1">
+        <perf_operation>
+            <type>0</type>
+            <value>2362000</value>
+        </perf_operation>
+    </perf_group>
+    <perf_group name="foreground" group_id="2">
+        <perf_operation>
+            <type>0</type>
+            <value>2362000</value>
+        </perf_operation>
+    </perf_group>
+    <perf_group name="root" group_id="3">
+        <perf_operation>
+            <type>0</type>
+            <value>2362000</value>
+        </perf_operation>
+    </perf_group>
+    <perf_group name="background" group_id="4">
+        <perf_operation>
+            <type>0</type>
+            <value>2362000</value>
+        </perf_operation>
+    </perf_group>
+    <perf_group name="system_background" group_id="5">
+        <perf_operation>
+            <type>0</type>
+            <value>2362000</value>
+        </perf_operation>
+    </perf_group>
+    <perf_group name="key_background" group_id="6">
+        <perf_operation>
+            <type>0</type>
+            <value>2362000</value>
+        </perf_operation>
+    </perf_group>
+    <perf_group name="vip" group_id="7">
+        <perf_operation>
+            <type>0</type>
+            <value>2362000</value>
+        </perf_operation>
+    </perf_group>
+-->
+
+<!-- name    -     qos_id
+    cpu_l                            = 0,
+    cpu_m                            = 1,
+    cpu_b                            = 2,
+    gpu                              = 3,
+    ddr                              = 4,
+    l3c                              = 5,
+    ipa_sustainable_power            = 6,
+    ipa_switch_temp                  = 7,
+    cpu_boost                        = 8,
+    eas                              = 9,
+    latency_cpu                      = 10,
+    latency_gpu                      = 11,
+    latency_ddr                      = 12,
+    io_speed                         = 13,
+    memlat_target_ratio_cpu_l        = 14,
+    memlat_target_ratio_cpu_m        = 15,
+    memlat_target_ratio_cpu_b        = 16,
+    memlat_polling_interval_cpu_l    = 17,
+    memlat_polling_interval_cpu_m    = 18,
+    memlat_polling_interval_cpu_b    = 19,
+    governor_load_cpu_l              = 20,
+    governor_load_cpu_m              = 21,
+    governor_load_cpu_b              = 22,
+    governor_load_gpu                = 23,
+    governor_delay_up_cpu_l          = 24,
+    governor_delay_up_cpu_m          = 25,
+    governor_delay_up_cpu_b          = 26,
+    governor_delay_up_gpu            = 27,
+    governor_delay_down_cpu_l        = 28,
+    governor_delay_down_cpu_m        = 29,
+    governor_delay_down_cpu_b        = 30,
+    governor_delay_down_gpu          = 31,
+-->
+
+
+<boost_policy>
+</boost_policy>
