@@ -6,4 +6,14 @@ LOCAL_PATH := $(call my-dir)
 
 ifneq ($(filter agassi2 anne bach2 bond figo florida leland,$(TARGET_DEVICE)),)
 
+include $(CLEAR_VARS)
+LOCAL_MODULE := gnss_supl20service_hisi
+LOCAL_MODULE_OWNER := huawei
+LOCAL_SRC_FILES := system/app/gnss_supl20service_hisi/gnss_supl20service_hisi.apk
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
+LOCAL_MODULE_CLASS := APPS
+LOCAL_CERTIFICATE := platform
+include $(BUILD_PREBUILT)
+
 endif
