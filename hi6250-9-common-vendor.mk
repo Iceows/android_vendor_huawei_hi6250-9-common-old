@@ -111,6 +111,7 @@ PRODUCT_COPY_FILES += \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/init/vendor.huawei.hardware.libteec@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.huawei.hardware.libteec@2.0-service.rc \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/init/vendor.huawei.hardware.sensors@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.huawei.hardware.sensors@1.0-service.rc \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/init/vendor.huawei.hardware.perfgenius@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.huawei.hardware.perfgenius@2.0-service.rc \
+    vendor/huawei/hi6250-9-common/proprietary/vendor/etc/init/vendor.huawei.hardware.graphics.mediacomm@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.huawei.hardware.graphics.mediacomm@2.0-service.rc \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/modemConfig/VIA/basic_name:$(TARGET_COPY_OUT_VENDOR)/etc/modemConfig/VIA/basic_name \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/modemConfig/VIA/viacbp82d_FieldTest.bcfg:$(TARGET_COPY_OUT_VENDOR)/etc/modemConfig/VIA/viacbp82d_FieldTest.bcfg \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/modemConfig/balong/FieldTest.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/modemConfig/balong/FieldTest.cfg \
@@ -195,6 +196,7 @@ PRODUCT_PACKAGES += \
     memtrack.hi6250 \
     sensors.hi6250 \
     thermal.hi6250 \
+	mediacomm.hi6250 \
     audio.primary_hisi.hi6250 \
     vendor.huawei.hardware.camera.factory@1.0-impl \
     vendor.huawei.hardware.libteec@2.0-impl \
@@ -286,8 +288,6 @@ PRODUCT_PACKAGES += \
     vendor.huawei.hardware.graphics.displayeffect@1.1 \
     vendor.huawei.hardware.graphics.displayeffect@1.2 \
     vendor.huawei.hardware.graphics.gpucommon@1.0 \
-    vendor.huawei.hardware.graphics.mediacomm@2.0 \
-    vendor.huawei.hardware.graphics.mediacomm@2.1 \
     vendor.huawei.hardware.hisiradio@1.0 \
     vendor.huawei.hardware.hisiradio@1.1 \
     vendor.huawei.hardware.hisupl@1.0 \
@@ -302,6 +302,8 @@ PRODUCT_PACKAGES += \
     vendor.huawei.hardware.radio@2.0 \
     vendor.huawei.hardware.sensors@1.0 \
     vendor.huawei.hardware.perfgenius@2.0 \
+    vendor.huawei.hardware.graphics.mediacomm@2.0 \
+    vendor.huawei.hardware.graphics.mediacomm@2.1 \
     libtrack \
     gps.hi1102.default \
     gps.hisi.default \
@@ -311,6 +313,7 @@ PRODUCT_PACKAGES += \
     vendor.huawei.hardware.hisupl@1.0-impl \
     vendor.huawei.hardware.sensors@1.0-impl \
     vendor.huawei.hardware.perfgenius@2.0-impl \
+	vendor.huawei.hardware.graphics.mediacomm@2.0-impl \
 	libperfhub \
 	libperfhub_service \
     libasd \
@@ -395,6 +398,7 @@ PRODUCT_PACKAGES += \
     vendor.huawei.hardware.libteec@2.0-service \
     vendor.huawei.hardware.sensors@1.0-service \
     vendor.huawei.hardware.perfgenius@2.0-service \
+	vendor.huawei.hardware.graphics.mediacomm@2.0-service \
     oam_hisi \
     octty \
     oeminfo_nvm_server \

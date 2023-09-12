@@ -334,6 +334,27 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+	name: "mediacomm.hi6250",
+	owner: "huawei",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/hw/mediacomm.hi6250.so"],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/hw/mediacomm.hi6250.so"],
+		},
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	relative_install_path: "hw",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
 	name: "vendor.huawei.hardware.camera.factory@1.0-impl",
 	owner: "huawei",
 	strip: {
@@ -366,6 +387,27 @@ cc_prebuilt_library_shared {
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/hw/vendor.huawei.hardware.libteec@2.0-impl.so"],
+		},
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	relative_install_path: "hw",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "vendor.huawei.hardware.graphics.mediacomm@2.0-impl",
+	owner: "huawei",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/hw/vendor.huawei.hardware.graphics.mediacomm@2.0-impl.so"],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/hw/vendor.huawei.hardware.graphics.mediacomm@2.0-impl.so"],
 		},
 	},
 	compile_multilib: "both",
@@ -3713,6 +3755,19 @@ cc_prebuilt_binary {
 	name: "vendor.huawei.hardware.biometrics.fingerprint@2.1-service",
 	owner: "huawei",
 	srcs: ["proprietary/vendor/bin/hw/vendor.huawei.hardware.biometrics.fingerprint@2.1-service"],
+	check_elf_files: false,
+	strip: {
+		none: true,
+	},
+	relative_install_path: "hw",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_binary {
+	name: "vendor.huawei.hardware.graphics.mediacomm@2.0-service",
+	owner: "huawei",
+	srcs: ["proprietary/vendor/bin/hw/vendor.huawei.hardware.graphics.mediacomm@2.0-service"],
 	check_elf_files: false,
 	strip: {
 		none: true,
