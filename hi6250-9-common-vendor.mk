@@ -413,6 +413,10 @@ PRODUCT_PACKAGES += \
     syna_155A_ta_lldp.sec \
     teecd
 
+# Packages
+PRODUCT_PACKAGES += \
+    libjni_latinimegoogle
+
 
 # Copy files
 PRODUCT_COPY_FILES += \
