@@ -2471,10 +2471,10 @@ cc_prebuilt_library_shared {
 	},
 	target: {
 		android_arm: {
-			srcs: ["proprietary/system/lib/libjni_latinimegoogle.so"],
+			srcs: ["system/lib/libjni_latinimegoogle.so"],
 		},
 		android_arm64: {
-			srcs: ["proprietary/system/lib64/libjni_latinimegoogle.so"],
+			srcs: ["system/lib64/libjni_latinimegoogle.so"],
 		},
 	},
 	compile_multilib: "both",
