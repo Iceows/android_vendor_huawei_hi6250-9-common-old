@@ -2464,26 +2464,6 @@ cc_prebuilt_library_shared {
 
 
 cc_prebuilt_library_shared {
-	name: "libjni_latinimegoogle",
-	owner: "google",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["system/lib/libjni_latinimegoogle.so"],
-		},
-		android_arm64: {
-			srcs: ["system/lib64/libjni_latinimegoogle.so"],
-		},
-	},
-	compile_multilib: "both",
-	check_elf_files: false,
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
 	name: "vendor.huawei.hardware.radio.chr@1.0",
 	owner: "huawei",
 	strip: {

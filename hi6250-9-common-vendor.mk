@@ -418,11 +418,6 @@ PRODUCT_PACKAGES += \
     syna_155A_ta_lldp.sec \
     teecd
 
-# Packages
-PRODUCT_PACKAGES += \
-    libjni_latinimegoogle
-
-
 # Copy files
 PRODUCT_COPY_FILES += \
     vendor/huawei/hi6250-9-common/proprietary/etc/gnss/config/gnss_suplconfig_hisi.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/gnss/config/gnss_suplconfig_hisi.xml \
