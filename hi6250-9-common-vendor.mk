@@ -146,7 +146,7 @@ PRODUCT_COPY_FILES += \
     vendor/huawei/hi6250-9-common/proprietary/vendor/firmware/libpn548ad_fw.so:$(TARGET_COPY_OUT_VENDOR)/firmware/libpn548ad_fw.so \
     vendor/huawei/hi6250-9-common/proprietary/vendor/firmware/libpn548ad_fw_10.01.1C_64bits.so:$(TARGET_COPY_OUT_VENDOR)/firmware/libpn548ad_fw_10.01.1C_64bits.so \
     vendor/huawei/hi6250-9-common/proprietary/vendor/firmware/libpn548ad_fw_10_01_1A_prod_slalm_64bits.so:$(TARGET_COPY_OUT_VENDOR)/firmware/libpn548ad_fw_10_01_1A_prod_slalm_64bits.so \
-    vendor/huawei/hi6250-9-common/proprietary/vendor/firmware/libpn551_fw_10_05_03_64bits.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpn551_fw.so \
+    vendor/huawei/hi6250-9-common/proprietary/vendor/firmware/libpn551_fw_10_05_03_64bits.so:$(TARGET_COPY_OUT_VENDOR)/firmware/libpn551_fw_10_05_03_64bits.so \
     vendor/huawei/hi6250-9-common/proprietary/vendor/firmware/nvram43455_hw.txt:$(TARGET_COPY_OUT_VENDOR)/firmware/nvram43455_hw.txt \
     vendor/huawei/hi6250-9-common/proprietary/vendor/firmware/nvram43455_hw_vn1.txt:$(TARGET_COPY_OUT_VENDOR)/firmware/nvram43455_hw_vn1.txt \
     vendor/huawei/hi6250-9-common/proprietary/vendor/firmware/ram_reg_test_cfg:$(TARGET_COPY_OUT_VENDOR)/firmware/ram_reg_test_cfg \
@@ -336,6 +336,7 @@ PRODUCT_PACKAGES += \
     libtas2560 \
     vendor.huawei.hardware.rtt@1.0 \
     tee_auth_daemon \
+    libpn551_fw \
     32e6a847-ac89-4f81-8a13-f4ae50451d7f.sec \
     335129cd-41fa-4b53-9797-5ccb202a52d4.sec \
     4382f063-a6c3-485f-8786-e275512bd2ad.sec \
