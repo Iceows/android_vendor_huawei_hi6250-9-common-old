@@ -5,11 +5,10 @@
 PRODUCT_SOONG_NAMESPACES += \
     vendor/huawei/hi6250-9-common
 
-# Copy files
 PRODUCT_COPY_FILES += \
     vendor/huawei/hi6250-9-common/proprietary/etc/native_packages.bin:$(TARGET_COPY_OUT_SYSTEM)/etc/native_packages.bin \
-    vendor/huawei/hi6250-9-common/proprietary/vendor/etc/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/audio_effects.xml \
-    vendor/huawei/hi6250-9-common/proprietary/vendor/etc/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/audio_policy_configuration.xml \
+    vendor/huawei/hi6250-9-common/proprietary/vendor/etc/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
+    vendor/huawei/hi6250-9-common/proprietary/vendor/etc/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/bluetooth/bt_vendor.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bt_vendor.conf \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/camera/bshutter/default/algo.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/bshutter/default/algo.xml \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/camera/bshutter/default/info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/bshutter/default/info.xml \
@@ -109,9 +108,8 @@ PRODUCT_COPY_FILES += \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/init/vendor.huawei.hardware.gnss@1.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.huawei.hardware.gnss@1.2-service.rc \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/init/vendor.huawei.hardware.hisupl@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.huawei.hardware.hisupl@1.0-service.rc \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/init/vendor.huawei.hardware.libteec@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.huawei.hardware.libteec@2.0-service.rc \
-    vendor/huawei/hi6250-9-common/proprietary/vendor/etc/init/vendor.huawei.hardware.sensors@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.huawei.hardware.sensors@1.0-service.rc \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/init/vendor.huawei.hardware.perfgenius@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.huawei.hardware.perfgenius@2.0-service.rc \
-    vendor/huawei/hi6250-9-common/proprietary/vendor/etc/init/vendor.huawei.hardware.graphics.mediacomm@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.huawei.hardware.graphics.mediacomm@2.0-service.rc \
+    vendor/huawei/hi6250-9-common/proprietary/vendor/etc/init/vendor.huawei.hardware.sensors@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.huawei.hardware.sensors@1.0-service.rc \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/modemConfig/VIA/basic_name:$(TARGET_COPY_OUT_VENDOR)/etc/modemConfig/VIA/basic_name \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/modemConfig/VIA/viacbp82d_FieldTest.bcfg:$(TARGET_COPY_OUT_VENDOR)/etc/modemConfig/VIA/viacbp82d_FieldTest.bcfg \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/modemConfig/balong/FieldTest.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/modemConfig/balong/FieldTest.cfg \
@@ -120,6 +118,9 @@ PRODUCT_COPY_FILES += \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/modemConfig/viacbp82d_log.bcfg:$(TARGET_COPY_OUT_VENDOR)/etc/modemConfig/viacbp82d_log.bcfg \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/modemConfig/viacbp82d_shutdown_log.bcfg:$(TARGET_COPY_OUT_VENDOR)/etc/modemConfig/viacbp82d_shutdown_log.bcfg \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/native_packages.bin:$(TARGET_COPY_OUT_VENDOR)/etc/native_packages.bin \
+    vendor/huawei/hi6250-9-common/proprietary/vendor/etc/perfgenius_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perfgenius_config.xml \
+    vendor/huawei/hi6250-9-common/proprietary/vendor/etc/perfgenius_event_policy.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perfgenius_event_policy.xml \
+    vendor/huawei/hi6250-9-common/proprietary/vendor/etc/perfgenius_scenario_policy.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perfgenius_scenario_policy.xml \
     vendor/huawei/hi6250-9-common/proprietary/vendor/firmware/BCM4345C0_003.001.025.0033.0000_Generic.hcd:$(TARGET_COPY_OUT_VENDOR)/firmware/BCM4345C0_003.001.025.0033.0000_Generic.hcd \
     vendor/huawei/hi6250-9-common/proprietary/vendor/firmware/CPU_RAM_SCHED.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/CPU_RAM_SCHED.bin \
     vendor/huawei/hi6250-9-common/proprietary/vendor/firmware/CPU_RAM_WBS.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/CPU_RAM_WBS.bin \
@@ -129,7 +130,6 @@ PRODUCT_COPY_FILES += \
     vendor/huawei/hi6250-9-common/proprietary/vendor/firmware/cr4_asic.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/cr4_asic.bin \
     vendor/huawei/hi6250-9-common/proprietary/vendor/firmware/cr4_regmem.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/cr4_regmem.bin \
     vendor/huawei/hi6250-9-common/proprietary/vendor/firmware/cr4_regmem_u1.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/cr4_regmem_u1.bin \
-    vendor/huawei/hi6250-9-common/proprietary/vendor/firmware/emmc_emer_fw.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/emmc_emer_fw.bin \
     vendor/huawei/hi6250-9-common/proprietary/vendor/firmware/fw_bcm43455_apsta_hw.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/fw_bcm43455_apsta_hw.bin \
     vendor/huawei/hi6250-9-common/proprietary/vendor/firmware/fw_bcm43455_hw.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/fw_bcm43455_hw.bin \
     vendor/huawei/hi6250-9-common/proprietary/vendor/firmware/fw_bcm43455_test_hw_apsta.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/fw_bcm43455_test_hw_apsta.bin \
@@ -137,9 +137,7 @@ PRODUCT_COPY_FILES += \
     vendor/huawei/hi6250-9-common/proprietary/vendor/firmware/hifi_6402_2spk.img:$(TARGET_COPY_OUT_VENDOR)/firmware/hifi_6402_2spk.img \
     vendor/huawei/hi6250-9-common/proprietary/vendor/firmware/hifi_6402_2wake.img:$(TARGET_COPY_OUT_VENDOR)/firmware/hifi_6402_2wake.img \
     vendor/huawei/hi6250-9-common/proprietary/vendor/firmware/hifi_6402_tas2smartpa.img:$(TARGET_COPY_OUT_VENDOR)/firmware/hifi_6402_tas2smartpa.img \
-    vendor/huawei/hi6250-9-common/proprietary/vendor/firmware/hifi_6402_tas2smartpa_no_wakeup_aec.img:$(TARGET_COPY_OUT_VENDOR)/firmware/hifi_6402_tas2smartpa_no_wakeup_aec.img \
     vendor/huawei/hi6250-9-common/proprietary/vendor/firmware/hifi_6402_tas4smartpa.img:$(TARGET_COPY_OUT_VENDOR)/firmware/hifi_6402_tas4smartpa.img \
-    vendor/huawei/hi6250-9-common/proprietary/vendor/firmware/hifi_6402_tas4smartpa_no_wakeup_aec.img:$(TARGET_COPY_OUT_VENDOR)/firmware/hifi_6402_tas4smartpa_no_wakeup_aec.img \
     vendor/huawei/hi6250-9-common/proprietary/vendor/firmware/isp_bw.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/isp_bw.elf \
     vendor/huawei/hi6250-9-common/proprietary/vendor/firmware/isp_dts.img:$(TARGET_COPY_OUT_VENDOR)/firmware/isp_dts.img \
     vendor/huawei/hi6250-9-common/proprietary/vendor/firmware/isp_fw.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/isp_fw.elf \
@@ -172,19 +170,15 @@ PRODUCT_COPY_FILES += \
     vendor/huawei/hi6250-9-common/proprietary/vendor/firmware/wifi_cfg:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi_cfg \
     vendor/huawei/hi6250-9-common/proprietary/vendor/modem/modem_fw/readme.txt:$(TARGET_COPY_OUT_VENDOR)/modem/modem_fw/readme.txt \
     vendor/huawei/hi6250-9-common/proprietary/vendor/phone.prop:$(TARGET_COPY_OUT_VENDOR)/phone.prop \
-	vendor/huawei/hi6250-9-common/proprietary/vendor/etc/perfgenius/perfgenius_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perfgenius_config.xml \
-	vendor/huawei/hi6250-9-common/proprietary/vendor/etc/perfgenius/perfgenius_event_policy.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perfgenius_event_policy.xml \
-	vendor/huawei/hi6250-9-common/proprietary/vendor/etc/perfgenius/perfgenius_scenario_policy.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perfgenius_scenario_policy.xml \
     vendor/huawei/hi6250-9-common/proprietary/vendor/usr/idc/fingerprint.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/fingerprint.idc
 
-
-# Packages
 PRODUCT_PACKAGES += \
     libc_secshared_system \
     libteec_client \
     libtuidaemon \
     vendor.huawei.hardware.libteec@1.0 \
     vendor.huawei.hardware.libteec@2.0.so_system \
+    libunwindstack_v28 \
     libGLES_mali \
     CameraFactoryService \
     fingerprint.hi6250 \
@@ -193,13 +187,14 @@ PRODUCT_PACKAGES += \
     hicam.hal.service \
     hwcomposer.hi6250 \
     lights.hi6250 \
+    mediacomm.hi6250 \
     memtrack.hi6250 \
     sensors.hi6250 \
     thermal.hi6250 \
-	mediacomm.hi6250 \
-    audio.primary_hisi.hi6250 \
     vendor.huawei.hardware.camera.factory@1.0-impl \
+    vendor.huawei.hardware.graphics.mediacomm@2.0-impl \
     vendor.huawei.hardware.libteec@2.0-impl \
+    vendor.huawei.hardware.perfgenius@2.0-impl \
     hwcam.ddt \
     hwcam.services \
     libBestShot \
@@ -255,6 +250,8 @@ PRODUCT_PACKAGES += \
     libomx_vxd \
     libomx_vxe \
     libperfgenius_vendor_client \
+    libperfhub \
+    libperfhub_service \
     libpf_customize_hisi \
     libpf_oneimage_hisi \
     libpf_rotate_hisi \
@@ -264,7 +261,6 @@ PRODUCT_PACKAGES += \
     libteec \
     libteec_eid \
     libteec_vendor \
-    libunwindstack_v28 \
     libxcollie \
     libhuaweiprocessing \
     liboffloadvisualizer \
@@ -288,6 +284,8 @@ PRODUCT_PACKAGES += \
     vendor.huawei.hardware.graphics.displayeffect@1.1 \
     vendor.huawei.hardware.graphics.displayeffect@1.2 \
     vendor.huawei.hardware.graphics.gpucommon@1.0 \
+    vendor.huawei.hardware.graphics.mediacomm@2.0 \
+    vendor.huawei.hardware.graphics.mediacomm@2.1 \
     vendor.huawei.hardware.hisiradio@1.0 \
     vendor.huawei.hardware.hisiradio@1.1 \
     vendor.huawei.hardware.hisupl@1.0 \
@@ -296,15 +294,14 @@ PRODUCT_PACKAGES += \
     vendor.huawei.hardware.hwvibrator@1.0 \
     vendor.huawei.hardware.iawareperf@1.0 \
     vendor.huawei.hardware.libteec@2.0 \
+    vendor.huawei.hardware.perfgenius@2.0 \
     vendor.huawei.hardware.radio.chr@1.0 \
     vendor.huawei.hardware.radio.deprecated@1.0 \
     vendor.huawei.hardware.radio.ims@1.0 \
     vendor.huawei.hardware.radio@2.0 \
     vendor.huawei.hardware.sensors@1.0 \
-    vendor.huawei.hardware.perfgenius@2.0 \
-    vendor.huawei.hardware.graphics.mediacomm@2.0 \
-    vendor.huawei.hardware.graphics.mediacomm@2.1 \
     libtrack \
+    audio.primary_hisi.hi6250 \
     gps.hi1102.default \
     gps.hisi.default \
     hisupl.hi1102.default \
@@ -312,10 +309,6 @@ PRODUCT_PACKAGES += \
     vendor.huawei.hardware.gnss@1.2-impl \
     vendor.huawei.hardware.hisupl@1.0-impl \
     vendor.huawei.hardware.sensors@1.0-impl \
-    vendor.huawei.hardware.perfgenius@2.0-impl \
-	vendor.huawei.hardware.graphics.mediacomm@2.0-impl \
-	libperfhub \
-	libperfhub_service \
     libasd \
     libaudio_custom \
     libaudiodump \
@@ -335,8 +328,8 @@ PRODUCT_PACKAGES += \
     libsmartpakit \
     libtas2560 \
     vendor.huawei.hardware.rtt@1.0 \
+    vendor.huawei.hardware.graphics.mediacomm@2.0-service \
     tee_auth_daemon \
-    libpn551_fw \
     32e6a847-ac89-4f81-8a13-f4ae50451d7f.sec \
     335129cd-41fa-4b53-9797-5ccb202a52d4.sec \
     4382f063-a6c3-485f-8786-e275512bd2ad.sec \
@@ -353,7 +346,6 @@ PRODUCT_PACKAGES += \
     a3d05777-b0ec-43b0-8887-a7f93697830a.sec \
     b4b71581-add2-e89f-d536-f35436dc7973.sec \
     c30917f8-d869-4379-8f46-4ac62be198dd.sec \
-    cdfinger_fps1256s_ta.sec \
     d77c4d60-d279-4425-afa8-7f94559eae16.sec \
     e00d7df7-79e5-4507-9d8c-df03d5a7a8a5.sec \
     e8014913-e501-4d44-a9d6-058ec3b93b90.sec \
@@ -395,11 +387,11 @@ PRODUCT_PACKAGES += \
     rild \
     vendor.huawei.hardware.biometrics.fingerprint@2.1-service \
     vendor.huawei.hardware.gnss@1.2-service \
+    vendor.huawei.hardware.graphics.mediacomm@2.0-service \
     vendor.huawei.hardware.hisupl@1.0-service \
     vendor.huawei.hardware.libteec@2.0-service \
-    vendor.huawei.hardware.sensors@1.0-service \
     vendor.huawei.hardware.perfgenius@2.0-service \
-	vendor.huawei.hardware.graphics.mediacomm@2.0-service \
+    vendor.huawei.hardware.sensors@1.0-service \
     oam_hisi \
     octty \
     oeminfo_nvm_server \
@@ -417,13 +409,3 @@ PRODUCT_PACKAGES += \
     syna_155A_ta.sec \
     syna_155A_ta_lldp.sec \
     teecd
-
-# Copy files
-PRODUCT_COPY_FILES += \
-    vendor/huawei/hi6250-9-common/proprietary/etc/gnss/config/gnss_suplconfig_hisi.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/gnss/config/gnss_suplconfig_hisi.xml \
-    vendor/huawei/hi6250-9-common/proprietary/etc/permissions/privapp-permissions-supl.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-supl.xml
-
-PRODUCT_PACKAGES += \
-    gnss_supl20service_hisi
-
-
