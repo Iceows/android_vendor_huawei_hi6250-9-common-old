@@ -301,7 +301,7 @@ PRODUCT_PACKAGES += \
     vendor.huawei.hardware.radio@2.0 \
     vendor.huawei.hardware.sensors@1.0 \
     libtrack \
-    audio.primary_hisi.hi6250 \
+    audio.primary.hi6250 \
     gps.hi1102.default \
     gps.hisi.default \
     hisupl.hi1102.default \
