@@ -182,6 +182,7 @@ PRODUCT_PACKAGES += \
     libGLES_mali \
     CameraFactoryService \
     fingerprint.hi6250 \
+    gatekeeper.hi6250 \
     gralloc.hi6250 \
     hicam.hal.bz \
     hicam.hal.service \
