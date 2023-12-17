@@ -186,7 +186,6 @@ PRODUCT_PACKAGES += \
     hicam.hal.bz \
     hicam.hal.service \
     hwcomposer.hi6250 \
-    keystore.hi6250 \
     lights.hi6250 \
     mediacomm.hi6250 \
     memtrack.hi6250 \
