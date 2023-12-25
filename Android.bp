@@ -4064,3 +4064,14 @@ cc_prebuilt_binary {
 	soc_specific: true,
 }
 
+cc_prebuilt_binary {
+	name: "tlogcat",
+	owner: "huawei",
+	srcs: ["proprietary/vendor/bin/tlogcat"],
+	check_elf_files: false,
+	strip: {
+		none: true,
+	},
+	prefer: true,
+	soc_specific: true,
+}

@@ -408,4 +408,7 @@ PRODUCT_PACKAGES += \
     syna_109A0_ta.sec \
     syna_155A_ta.sec \
     syna_155A_ta_lldp.sec \
-    teecd
+    teecd \
+    tlogcat
+
+
