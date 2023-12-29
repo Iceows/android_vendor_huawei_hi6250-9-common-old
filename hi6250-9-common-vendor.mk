@@ -109,6 +109,7 @@ PRODUCT_COPY_FILES += \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/init/vendor.huawei.hardware.libteec@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.huawei.hardware.libteec@2.0-service.rc \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/init/vendor.huawei.hardware.perfgenius@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.huawei.hardware.perfgenius@2.0-service.rc \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/init/vendor.huawei.hardware.sensors@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.huawei.hardware.sensors@1.0-service.rc \
+    vendor/huawei/hi6250-9-common/proprietary/etc/init/android.hardware.drm@1.2-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.2-service.widevine.rc\
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/modemConfig/VIA/basic_name:$(TARGET_COPY_OUT_VENDOR)/etc/modemConfig/VIA/basic_name \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/modemConfig/VIA/viacbp82d_FieldTest.bcfg:$(TARGET_COPY_OUT_VENDOR)/etc/modemConfig/VIA/viacbp82d_FieldTest.bcfg \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/modemConfig/balong/FieldTest.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/modemConfig/balong/FieldTest.cfg \
@@ -392,6 +393,10 @@ PRODUCT_PACKAGES += \
     vendor.huawei.hardware.libteec@2.0-service \
     vendor.huawei.hardware.perfgenius@2.0-service \
     vendor.huawei.hardware.sensors@1.0-service \
+    android.hardware.drm@1.2-service.widevine \
+    libnoveldrmengine \
+    libwvhidl \
+    liboemcrypto \
     oam_hisi \
     octty \
     oeminfo_nvm_server \
