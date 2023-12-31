@@ -4127,6 +4127,24 @@ cc_prebuilt_library_shared {
 	soc_specific: true,
 }
 
+cc_prebuilt_library_shared {
+    name: "libprotobuf-cpp-lite-v29",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/lib/libprotobuf-cpp-lite.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary/lib64/libprotobuf-cpp-lite.so"],
+        },
+    },
+    compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
 cc_prebuilt_binary {
 	name: "android.hardware.drm@1.2-service.widevine",
 	owner: "huawei",
