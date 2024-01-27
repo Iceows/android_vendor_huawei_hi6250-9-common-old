@@ -178,6 +178,8 @@ PRODUCT_PACKAGES += \
     libtuidaemon \
     vendor.huawei.hardware.libteec@1.0 \
     vendor.huawei.hardware.libteec@2.0.so_system \
+    libstorekeybox \
+    libkeymaster3_attestation \
     libunwindstack_v28 \
     libGLES_mali \
     CameraFactoryService \

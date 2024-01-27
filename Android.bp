@@ -45,6 +45,44 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+	name: "libstorekeybox",
+	owner: "huawei",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/lib/libstorekeybox.so"],
+		},
+		android_arm64: {
+			srcs: ["proprietary/lib64/libstorekeybox.so"],
+		},
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	prefer: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libkeymaster3_attestation",
+	owner: "huawei",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/lib/libkeymaster3_attestation.so"],
+		},
+		android_arm64: {
+			srcs: ["proprietary/lib64/libkeymaster3_attestation.so"],
+		},
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	prefer: true,
+}
+
+cc_prebuilt_library_shared {
 	name: "libtuidaemon",
 	owner: "huawei",
 	strip: {
