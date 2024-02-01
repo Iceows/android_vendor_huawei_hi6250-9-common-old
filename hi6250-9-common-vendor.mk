@@ -7,7 +7,9 @@ PRODUCT_SOONG_NAMESPACES += \
 
 PRODUCT_COPY_FILES += \
     vendor/huawei/hi6250-9-common/proprietary/etc/native_packages.bin:$(TARGET_COPY_OUT_SYSTEM)/etc/native_packages.bin \
+    vendor/huawei/hi6250-9-common/proprietary/vendor/bin/hw/vendor.huawei.hardware.fm@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.huawei.hardware.fm@1.0-service \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
+    vendor/huawei/hi6250-9-common/proprietary/vendor/etc/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/bluetooth/bt_vendor.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bt_vendor.conf \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/camera/bshutter/default/algo.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/bshutter/default/algo.xml \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/camera/bshutter/default/info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/bshutter/default/info.xml \
@@ -104,6 +106,7 @@ PRODUCT_COPY_FILES += \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/gnss/rmd/t/a_1:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/rmd/t/a_1 \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/gnss/rmd/t/aindex.bin:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/rmd/t/aindex.bin \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/init/vendor.huawei.hardware.biometrics.fingerprint@2.1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.huawei.hardware.biometrics.fingerprint@2.1-service.rc \
+    vendor/huawei/hi6250-9-common/proprietary/vendor/etc/init/vendor.huawei.hardware.fm@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.huawei.hardware.fm@1.0-service.rc \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/init/vendor.huawei.hardware.gnss@1.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.huawei.hardware.gnss@1.2-service.rc \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/init/vendor.huawei.hardware.hisupl@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.huawei.hardware.hisupl@1.0-service.rc \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/init/vendor.huawei.hardware.libteec@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.huawei.hardware.libteec@2.0-service.rc \
@@ -168,6 +171,10 @@ PRODUCT_COPY_FILES += \
     vendor/huawei/hi6250-9-common/proprietary/vendor/firmware/ts/venus_synaptics_VENS11140_ebbg.img:$(TARGET_COPY_OUT_VENDOR)/firmware/ts/venus_synaptics_VENS11140_ebbg.img \
     vendor/huawei/hi6250-9-common/proprietary/vendor/firmware/ts/venus_synaptics_VENS18100_lg.img:$(TARGET_COPY_OUT_VENDOR)/firmware/ts/venus_synaptics_VENS18100_lg.img \
     vendor/huawei/hi6250-9-common/proprietary/vendor/firmware/wifi_cfg:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi_cfg \
+    vendor/huawei/hi6250-9-common/proprietary/vendor/lib/hw/fm.hisi.hi6250.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/fm.hisi.hi6250.so \
+    vendor/huawei/hi6250-9-common/proprietary/vendor/lib/vendor.huawei.hardware.fm@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.huawei.hardware.fm@1.0.so \
+    vendor/huawei/hi6250-9-common/proprietary/vendor/lib64/hw/fm.hisi.hi6250.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/fm.hisi.hi6250.so \
+    vendor/huawei/hi6250-9-common/proprietary/vendor/lib64/vendor.huawei.hardware.fm@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.huawei.hardware.fm@1.0.so \
     vendor/huawei/hi6250-9-common/proprietary/vendor/modem/modem_fw/readme.txt:$(TARGET_COPY_OUT_VENDOR)/modem/modem_fw/readme.txt \
     vendor/huawei/hi6250-9-common/proprietary/vendor/phone.prop:$(TARGET_COPY_OUT_VENDOR)/phone.prop \
     vendor/huawei/hi6250-9-common/proprietary/vendor/usr/idc/fingerprint.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/fingerprint.idc
@@ -178,11 +185,10 @@ PRODUCT_PACKAGES += \
     libtuidaemon \
     vendor.huawei.hardware.libteec@1.0 \
     vendor.huawei.hardware.libteec@2.0.so_system \
-    libstorekeybox \
-    libkeymaster3_attestation \
     libunwindstack_v28 \
     libGLES_mali \
     CameraFactoryService \
+    audio.primary_hisi.hi6250 \
     fingerprint.hi6250 \
     gatekeeper.hi6250 \
     gralloc.hi6250 \
@@ -240,6 +246,7 @@ PRODUCT_PACKAGES += \
     libimonitor \
     libispenhnc \
     libjtag_wdt_ctrl \
+    libkeymaster3_attestation \
     libmediacomm@2.0-client \
     libmorpho_effect_library5 \
     libmotiondetect \
@@ -262,6 +269,7 @@ PRODUCT_PACKAGES += \
     libril \
     libscenedetection \
     libstagefrighthw \
+    libstorekeybox \
     libteec \
     libteec_eid \
     libteec_vendor \
@@ -305,7 +313,6 @@ PRODUCT_PACKAGES += \
     vendor.huawei.hardware.radio@2.0 \
     vendor.huawei.hardware.sensors@1.0 \
     libtrack \
-    audio.primary_hisi.hi6250 \
     gps.hi1102.default \
     gps.hisi.default \
     hisupl.hi1102.default \
@@ -418,5 +425,3 @@ PRODUCT_PACKAGES += \
     syna_155A_ta_lldp.sec \
     teecd \
     tlogcat
-
-

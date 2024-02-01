@@ -45,44 +45,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "libstorekeybox",
-	owner: "huawei",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/lib/libstorekeybox.so"],
-		},
-		android_arm64: {
-			srcs: ["proprietary/lib64/libstorekeybox.so"],
-		},
-	},
-	compile_multilib: "both",
-	check_elf_files: false,
-	prefer: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libkeymaster3_attestation",
-	owner: "huawei",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/lib/libkeymaster3_attestation.so"],
-		},
-		android_arm64: {
-			srcs: ["proprietary/lib64/libkeymaster3_attestation.so"],
-		},
-	},
-	compile_multilib: "both",
-	check_elf_files: false,
-	prefer: true,
-}
-
-cc_prebuilt_library_shared {
 	name: "libtuidaemon",
 	owner: "huawei",
 	strip: {
@@ -193,6 +155,27 @@ cc_prebuilt_library_shared {
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/hw/CameraFactoryService.so"],
+		},
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	relative_install_path: "hw",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "audio.primary_hisi.hi6250",
+	owner: "huawei",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/hw/audio.primary_hisi.hi6250.so"],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/hw/audio.primary_hisi.hi6250.so"],
 		},
 	},
 	compile_multilib: "both",
@@ -1361,6 +1344,26 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+	name: "libkeymaster3_attestation",
+	owner: "huawei",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libkeymaster3_attestation.so"],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libkeymaster3_attestation.so"],
+		},
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
 	name: "libmediacomm@2.0-client",
 	owner: "huawei",
 	strip: {
@@ -1792,6 +1795,26 @@ cc_prebuilt_library_shared {
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libstagefrighthw.so"],
+		},
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libstorekeybox",
+	owner: "huawei",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libstorekeybox.so"],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libstorekeybox.so"],
 		},
 	},
 	compile_multilib: "both",
@@ -2655,24 +2678,6 @@ cc_prebuilt_library_shared {
 	},
 	compile_multilib: "32",
 	check_elf_files: false,
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "audio.primary_hisi.hi6250",
-	owner: "huawei",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/hw/audio.primary_hisi.hi6250.so"],
-		},
-	},
-	compile_multilib: "64",
-	check_elf_files: false,
-	relative_install_path: "hw",
 	prefer: true,
 	soc_specific: true,
 }
@@ -4195,4 +4200,3 @@ cc_prebuilt_binary {
 	relative_install_path: "hw",
 	soc_specific: true,
 }
-
