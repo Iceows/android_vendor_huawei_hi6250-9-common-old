@@ -226,6 +226,27 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+	name: "fm.hisi.hi6250",
+	owner: "huawei",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/hw/fm.hisi.hi6250.so"],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/hw/fm.hisi.hi6250.so"],
+		},
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	relative_install_path: "hw",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
 	name: "gralloc.hi6250",
 	owner: "huawei",
 	strip: {
@@ -474,6 +495,40 @@ cc_prebuilt_library_shared {
 	check_elf_files: false,
 	relative_install_path: "hw",
 	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "vendor.huawei.hardware.fm@1.0",
+	owner: "huawei",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/vendor.huawei.hardware.fm@1.0.so"],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/vendor.huawei.hardware.fm@1.0.so"],
+		},
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	relative_install_path: "hw",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_binary {
+	name: "vendor.huawei.hardware.fm@1.0-service",
+	owner: "huawei",
+	srcs: ["proprietary/vendor/bin/hw/vendor.huawei.hardware.fm@1.0-service"],
+	check_elf_files: false,
+	strip: {
+		none: true,
+	},
+	prefer: true,
+	relative_install_path: "hw",
 	soc_specific: true,
 }
 
@@ -922,26 +977,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "libchrlog",
-	owner: "huawei",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/libchrlog.so"],
-		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libchrlog.so"],
-		},
-	},
-	compile_multilib: "both",
-	check_elf_files: false,
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
 	name: "libcommril",
 	owner: "huawei",
 	strip: {
@@ -1213,26 +1248,6 @@ cc_prebuilt_library_shared {
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libhuaweicust.so"],
-		},
-	},
-	compile_multilib: "both",
-	check_elf_files: false,
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libhwlog",
-	owner: "huawei",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/libhwlog.so"],
-		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libhwlog.so"],
 		},
 	},
 	compile_multilib: "both",
@@ -1873,26 +1888,6 @@ cc_prebuilt_library_shared {
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libteec_vendor.so"],
-		},
-	},
-	compile_multilib: "both",
-	check_elf_files: false,
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libxcollie",
-	owner: "huawei",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/libxcollie.so"],
-		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libxcollie.so"],
 		},
 	},
 	compile_multilib: "both",
