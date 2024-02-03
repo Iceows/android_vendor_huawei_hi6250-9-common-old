@@ -104,6 +104,7 @@ PRODUCT_COPY_FILES += \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/gnss/rmd/g/aindex.bin:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/rmd/g/aindex.bin \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/gnss/rmd/t/a_1:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/rmd/t/a_1 \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/gnss/rmd/t/aindex.bin:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/rmd/t/aindex.bin \
+    vendor/huawei/hi6250-9-common/proprietary/vendor/etc/init/android.hardware.secure_element@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.secure_element@1.0-service.rc \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/init/vendor.huawei.hardware.biometrics.fingerprint@2.1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.huawei.hardware.biometrics.fingerprint@2.1-service.rc \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/init/vendor.huawei.hardware.fm@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.huawei.hardware.fm@1.0-service.rc \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/init/vendor.huawei.hardware.gnss@1.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.huawei.hardware.gnss@1.2-service.rc \
@@ -182,9 +183,10 @@ PRODUCT_PACKAGES += \
     vendor.huawei.hardware.libteec@2.0.so_system \
     libunwindstack_v28 \
     libGLES_mali \
+    ese_hw_hal \
     CameraFactoryService \
-    audio.primary_hisi.hi6250 \
     fingerprint.hi6250 \
+    fm.hisi.hi6250 \
     gatekeeper.hi6250 \
     gralloc.hi6250 \
     hicam.hal.bz \
@@ -220,7 +222,6 @@ PRODUCT_PACKAGES += \
     libc_sec_hisi_connectivity \
     libc_secshared \
     libcamerabuffer \
-    libchrlog \
     libcommril \
     libconn_factory_test \
     libdcamera_sr \
@@ -282,6 +283,7 @@ PRODUCT_PACKAGES += \
     vendor.huawei.hardware.camera.cfgsvr@1.0 \
     vendor.huawei.hardware.camera.cfgsvr@1.1 \
     vendor.huawei.hardware.camera.factory@1.0 \
+    vendor.huawei.hardware.fm@1.0 \
     vendor.huawei.hardware.gnss@1.0 \
     vendor.huawei.hardware.gnss@1.1 \
     vendor.huawei.hardware.gnss@1.2 \
@@ -306,6 +308,7 @@ PRODUCT_PACKAGES += \
     vendor.huawei.hardware.radio@2.0 \
     vendor.huawei.hardware.sensors@1.0 \
     libtrack \
+    audio.primary_hisi.hi6250 \
     gps.hi1102.default \
     gps.hisi.default \
     hisupl.hi1102.default \
@@ -388,19 +391,16 @@ PRODUCT_PACKAGES += \
     goodix_5296_ta_handel.sec \
     goodix_8206_ta.sec \
     gpsdaemon \
+    android.hardware.secure_element@1.0-service \
     rild \
     vendor.huawei.hardware.biometrics.fingerprint@2.1-service \
+    vendor.huawei.hardware.fm@1.0-service \
     vendor.huawei.hardware.gnss@1.2-service \
     vendor.huawei.hardware.graphics.mediacomm@2.0-service \
     vendor.huawei.hardware.hisupl@1.0-service \
     vendor.huawei.hardware.libteec@2.0-service \
     vendor.huawei.hardware.perfgenius@2.0-service \
     vendor.huawei.hardware.sensors@1.0-service \
-    vendor.huawei.hardware.fm@1.0-service \
-    android.hardware.drm@1.2-service.widevine \
-    libnoveldrmengine \
-    libwvhidl \
-    liboemcrypto \
     oam_hisi \
     octty \
     oeminfo_nvm_server \
@@ -418,7 +418,12 @@ PRODUCT_PACKAGES += \
     syna_155A_ta.sec \
     syna_155A_ta_lldp.sec \
     teecd \
-    tlogcat \
-    fm.hisi.hi6250 \
-    vendor.huawei.hardware.fm@1.0
+    tlogcat
 
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.2-service.widevine \
+    libnoveldrmengine \
+    libwvhidl \
+    liboemcrypto
+    
+ 

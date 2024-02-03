@@ -144,6 +144,26 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+	name: "ese_hw_hal",
+	owner: "huawei",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/ese_hw_hal.so"],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/ese_hw_hal.so"],
+		},
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
 	name: "CameraFactoryService",
 	owner: "huawei",
 	strip: {
@@ -163,25 +183,6 @@ cc_prebuilt_library_shared {
 	prefer: true,
 	soc_specific: true,
 }
-
-cc_prebuilt_library_shared {
-	name: "audio.primary_hisi.hi6250",
-	owner: "huawei",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/hw/audio.primary_hisi.hi6250.so"],
-		},
-	},
-	compile_multilib: "64",
-	check_elf_files: false,
-	relative_install_path: "hw",
-	prefer: true,
-	soc_specific: true,
-}
-
 
 cc_prebuilt_library_shared {
 	name: "fingerprint.hi6250",
@@ -205,27 +206,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "gatekeeper.hi6250",
-	owner: "huawei",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/hw/gatekeeper.hi6250.so"],
-		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/hw/gatekeeper.hi6250.so"],
-		},
-	},
-	compile_multilib: "both",
-	check_elf_files: false,
-	relative_install_path: "hw",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
 	name: "fm.hisi.hi6250",
 	owner: "huawei",
 	strip: {
@@ -237,6 +217,27 @@ cc_prebuilt_library_shared {
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/hw/fm.hisi.hi6250.so"],
+		},
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	relative_install_path: "hw",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "gatekeeper.hi6250",
+	owner: "huawei",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/hw/gatekeeper.hi6250.so"],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/hw/gatekeeper.hi6250.so"],
 		},
 	},
 	compile_multilib: "both",
@@ -495,40 +496,6 @@ cc_prebuilt_library_shared {
 	check_elf_files: false,
 	relative_install_path: "hw",
 	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.huawei.hardware.fm@1.0",
-	owner: "huawei",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/vendor.huawei.hardware.fm@1.0.so"],
-		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/vendor.huawei.hardware.fm@1.0.so"],
-		},
-	},
-	compile_multilib: "both",
-	check_elf_files: false,
-	relative_install_path: "hw",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_binary {
-	name: "vendor.huawei.hardware.fm@1.0-service",
-	owner: "huawei",
-	srcs: ["proprietary/vendor/bin/hw/vendor.huawei.hardware.fm@1.0-service"],
-	check_elf_files: false,
-	strip: {
-		none: true,
-	},
-	prefer: true,
-	relative_install_path: "hw",
 	soc_specific: true,
 }
 
@@ -2199,6 +2166,26 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+	name: "vendor.huawei.hardware.fm@1.0",
+	owner: "huawei",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/vendor.huawei.hardware.fm@1.0.so"],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/vendor.huawei.hardware.fm@1.0.so"],
+		},
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
 	name: "vendor.huawei.hardware.gnss@1.0",
 	owner: "huawei",
 	strip: {
@@ -2671,6 +2658,24 @@ cc_prebuilt_library_shared {
 	},
 	compile_multilib: "32",
 	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "audio.primary_hisi.hi6250",
+	owner: "huawei",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/hw/audio.primary_hisi.hi6250.so"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	relative_install_path: "hw",
 	prefer: true,
 	soc_specific: true,
 }
@@ -3793,6 +3798,19 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
+	name: "android.hardware.secure_element@1.0-service",
+	owner: "huawei",
+	srcs: ["proprietary/vendor/bin/hw/android.hardware.secure_element@1.0-service"],
+	check_elf_files: false,
+	strip: {
+		none: true,
+	},
+	prefer: true,
+	relative_install_path: "hw",
+	soc_specific: true,
+}
+
+cc_prebuilt_binary {
 	name: "rild",
 	owner: "huawei",
 	srcs: ["proprietary/vendor/bin/hw/rild"],
@@ -3809,6 +3827,19 @@ cc_prebuilt_binary {
 	name: "vendor.huawei.hardware.biometrics.fingerprint@2.1-service",
 	owner: "huawei",
 	srcs: ["proprietary/vendor/bin/hw/vendor.huawei.hardware.biometrics.fingerprint@2.1-service"],
+	check_elf_files: false,
+	strip: {
+		none: true,
+	},
+	prefer: true,
+	relative_install_path: "hw",
+	soc_specific: true,
+}
+
+cc_prebuilt_binary {
+	name: "vendor.huawei.hardware.fm@1.0-service",
+	owner: "huawei",
+	srcs: ["proprietary/vendor/bin/hw/vendor.huawei.hardware.fm@1.0-service"],
 	check_elf_files: false,
 	strip: {
 		none: true,
@@ -4193,3 +4224,4 @@ cc_prebuilt_binary {
 	relative_install_path: "hw",
 	soc_specific: true,
 }
+
