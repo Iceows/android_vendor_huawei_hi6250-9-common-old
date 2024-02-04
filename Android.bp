@@ -102,7 +102,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "vendor.huawei.hardware.fm@1.0",
+	name: "vendor_huawei_fm_system",
 	owner: "huawei",
 	strip: {
 		none: true,

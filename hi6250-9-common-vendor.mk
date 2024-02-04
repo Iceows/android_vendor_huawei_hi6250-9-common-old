@@ -285,6 +285,7 @@ PRODUCT_PACKAGES += \
     vendor.huawei.hardware.camera.cfgsvr@1.1 \
     vendor.huawei.hardware.camera.factory@1.0 \
     vendor.huawei.hardware.fm@1.0 \
+    vendor_huawei_fm_system \
     vendor.huawei.hardware.gnss@1.0 \
     vendor.huawei.hardware.gnss@1.1 \
     vendor.huawei.hardware.gnss@1.2 \
