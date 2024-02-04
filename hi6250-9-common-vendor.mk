@@ -192,7 +192,6 @@ PRODUCT_PACKAGES += \
     hicam.hal.bz \
     hicam.hal.service \
     hwcomposer.hi6250 \
-    keystore.hi6250 \
     lights.hi6250 \
     mediacomm.hi6250 \
     memtrack.hi6250 \
@@ -391,7 +390,7 @@ PRODUCT_PACKAGES += \
     goodix_5296_ta_handel.sec \
     goodix_8206_ta.sec \
     gpsdaemon \
-    android.hardware.secure_element@1.0-service \
+    android.hardware.secure_element@1.0-service.hisi \
     rild \
     vendor.huawei.hardware.biometrics.fingerprint@2.1-service \
     vendor.huawei.hardware.fm@1.0-service \
