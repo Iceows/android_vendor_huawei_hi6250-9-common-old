@@ -198,6 +198,7 @@ PRODUCT_PACKAGES += \
     sensors.hi6250 \
     thermal.hi6250 \
     vendor.huawei.hardware.camera.factory@1.0-impl \
+    vendor.huawei.hardware.fm@1.0-impl \
     vendor.huawei.hardware.graphics.mediacomm@2.0-impl \
     vendor.huawei.hardware.libteec@2.0-impl \
     vendor.huawei.hardware.perfgenius@2.0-impl \
