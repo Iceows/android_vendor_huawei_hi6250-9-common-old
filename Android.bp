@@ -103,6 +103,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
 	name: "vendor_huawei_fm_system",
+	stem: "vendor.huawei.hardware.fm@1.0",
 	owner: "huawei",
 	strip: {
 		none: true,
@@ -232,6 +233,27 @@ cc_prebuilt_library_shared {
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/hw/CameraFactoryService.so"],
+		},
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	relative_install_path: "hw",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "android.hardware.keymaster@3.0-impl",
+	owner: "huawei",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/hw/android.hardware.keymaster@3.0-impl.so"],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/hw/android.hardware.keymaster@3.0-impl.so"],
 		},
 	},
 	compile_multilib: "both",
@@ -3873,9 +3895,23 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-	name: "android.hardware.secure_element@1.0-service.hisi",
+	name: "android.hardware.secure_element@1.0-service-hisi",
 	owner: "huawei",
-	srcs: ["proprietary/vendor/bin/hw/android.hardware.secure_element@1.0-service.hisi"],
+	srcs: ["proprietary/vendor/bin/hw/android.hardware.secure_element@1.0-service-hisi"],
+	check_elf_files: false,
+	strip: {
+		none: true,
+	},
+	prefer: true,
+	relative_install_path: "hw",
+	soc_specific: true,
+}
+
+
+cc_prebuilt_binary {
+	name: "android.hardware.keymaster@3.0-service-hisi",
+	owner: "huawei",
+	srcs: ["proprietary/vendor/bin/hw/android.hardware.keymaster@3.0-service-hisi"],
 	check_elf_files: false,
 	strip: {
 		none: true,

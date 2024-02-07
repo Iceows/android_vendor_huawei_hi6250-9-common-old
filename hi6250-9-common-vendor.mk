@@ -104,6 +104,7 @@ PRODUCT_COPY_FILES += \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/gnss/rmd/g/aindex.bin:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/rmd/g/aindex.bin \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/gnss/rmd/t/a_1:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/rmd/t/a_1 \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/gnss/rmd/t/aindex.bin:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/rmd/t/aindex.bin \
+    vendor/huawei/hi6250-9-common/proprietary/vendor/etc/init/android.hardware.keymaster@3.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.keymaster@3.0-service.rc \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/init/android.hardware.secure_element@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.secure_element@1.0-service.rc \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/init/vendor.huawei.hardware.biometrics.fingerprint@2.1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.huawei.hardware.biometrics.fingerprint@2.1-service.rc \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/init/vendor.huawei.hardware.fm@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.huawei.hardware.fm@1.0-service.rc \
@@ -180,13 +181,14 @@ PRODUCT_PACKAGES += \
     libfm_jni \
     libteec_client \
     libtuidaemon \
-    vendor.huawei.hardware.fm@1.0 \
+    vendor_huawei_fm_system \
     vendor.huawei.hardware.libteec@1.0 \
     vendor.huawei.hardware.libteec@2.0.so_system \
     libunwindstack_v28 \
     libGLES_mali \
     ese_hw_hal \
     CameraFactoryService \
+    android.hardware.keymaster@3.0-impl \
     fingerprint.hi6250 \
     fm.hisi.hi6250 \
     gatekeeper.hi6250 \
@@ -194,6 +196,7 @@ PRODUCT_PACKAGES += \
     hicam.hal.bz \
     hicam.hal.service \
     hwcomposer.hi6250 \
+    keystore.hi6250 \
     lights.hi6250 \
     mediacomm.hi6250 \
     memtrack.hi6250 \
@@ -285,7 +288,6 @@ PRODUCT_PACKAGES += \
     vendor.huawei.hardware.camera.cfgsvr@1.1 \
     vendor.huawei.hardware.camera.factory@1.0 \
     vendor.huawei.hardware.fm@1.0 \
-    vendor_huawei_fm_system \
     vendor.huawei.hardware.gnss@1.0 \
     vendor.huawei.hardware.gnss@1.1 \
     vendor.huawei.hardware.gnss@1.2 \
@@ -394,7 +396,8 @@ PRODUCT_PACKAGES += \
     goodix_5296_ta_handel.sec \
     goodix_8206_ta.sec \
     gpsdaemon \
-    android.hardware.secure_element@1.0-service.hisi \
+    android.hardware.keymaster@3.0-service-hisi \
+    android.hardware.secure_element@1.0-service-hisi \
     rild \
     vendor.huawei.hardware.biometrics.fingerprint@2.1-service \
     vendor.huawei.hardware.fm@1.0-service \
@@ -421,8 +424,8 @@ PRODUCT_PACKAGES += \
     syna_155A_ta.sec \
     syna_155A_ta_lldp.sec \
     teecd \
-    tlogcat
-
+    tlogcat   
+ 
 PRODUCT_COPY_FILES += \
     vendor/huawei/hi6250-9-common/proprietary/etc/init/android.hardware.drm@1.2-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.2-service.widevine.rc
     
