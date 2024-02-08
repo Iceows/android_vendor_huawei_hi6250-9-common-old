@@ -243,17 +243,17 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "android.hardware.keymaster@3.0-impl",
+	name: "android.hardware.keymaster@3.0-impl-hisi",
 	owner: "huawei",
 	strip: {
 		none: true,
 	},
 	target: {
 		android_arm: {
-			srcs: ["proprietary/vendor/lib/hw/android.hardware.keymaster@3.0-impl.so"],
+			srcs: ["proprietary/vendor/lib/hw/android.hardware.keymaster@3.0-impl-hisi.so"],
 		},
 		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/hw/android.hardware.keymaster@3.0-impl.so"],
+			srcs: ["proprietary/vendor/lib64/hw/android.hardware.keymaster@3.0-impl-hisi.so"],
 		},
 	},
 	compile_multilib: "both",
@@ -3895,9 +3895,9 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-	name: "android.hardware.secure_element@1.0-service-hisi",
+	name: "android.hardware.secure_element@1.0-service.hisi",
 	owner: "huawei",
-	srcs: ["proprietary/vendor/bin/hw/android.hardware.secure_element@1.0-service-hisi"],
+	srcs: ["proprietary/vendor/bin/hw/android.hardware.secure_element@1.0-service.hisi"],
 	check_elf_files: false,
 	strip: {
 		none: true,
@@ -3909,9 +3909,9 @@ cc_prebuilt_binary {
 
 
 cc_prebuilt_binary {
-	name: "android.hardware.keymaster@3.0-service-hisi",
+	name: "android.hardware.keymaster@3.0-service.hisi",
 	owner: "huawei",
-	srcs: ["proprietary/vendor/bin/hw/android.hardware.keymaster@3.0-service-hisi"],
+	srcs: ["proprietary/vendor/bin/hw/android.hardware.keymaster@3.0-service.hisi"],
 	check_elf_files: false,
 	strip: {
 		none: true,

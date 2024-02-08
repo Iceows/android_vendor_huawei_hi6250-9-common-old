@@ -188,7 +188,7 @@ PRODUCT_PACKAGES += \
     libGLES_mali \
     ese_hw_hal \
     CameraFactoryService \
-    android.hardware.keymaster@3.0-impl \
+    android.hardware.keymaster@3.0-impl-hisi \
     fingerprint.hi6250 \
     fm.hisi.hi6250 \
     gatekeeper.hi6250 \
@@ -396,8 +396,8 @@ PRODUCT_PACKAGES += \
     goodix_5296_ta_handel.sec \
     goodix_8206_ta.sec \
     gpsdaemon \
-    android.hardware.keymaster@3.0-service-hisi \
-    android.hardware.secure_element@1.0-service-hisi \
+    android.hardware.keymaster@3.0-service.hisi \
+    android.hardware.secure_element@1.0-service.hisi \
     rild \
     vendor.huawei.hardware.biometrics.fingerprint@2.1-service \
     vendor.huawei.hardware.fm@1.0-service \
