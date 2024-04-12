@@ -8,7 +8,6 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_COPY_FILES += \
     vendor/huawei/hi6250-9-common/proprietary/etc/native_packages.bin:$(TARGET_COPY_OUT_SYSTEM)/etc/native_packages.bin \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
-    vendor/huawei/hi6250-9-common/proprietary/vendor/etc/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/bluetooth/bt_vendor.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bt_vendor.conf \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/camera/bshutter/default/algo.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/bshutter/default/algo.xml \
     vendor/huawei/hi6250-9-common/proprietary/vendor/etc/camera/bshutter/default/info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/bshutter/default/info.xml \
