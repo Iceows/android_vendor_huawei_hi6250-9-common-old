@@ -424,12 +424,4 @@ PRODUCT_PACKAGES += \
     teecd \
     tlogcat   
  
-PRODUCT_COPY_FILES += \
-    vendor/huawei/hi6250-9-common/proprietary/etc/init/android.hardware.drm@1.2-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.2-service.widevine.rc
-    
-PRODUCT_PACKAGES += \
-    android.hardware.drm@1.2-service.widevine \
-    libnoveldrmengine \
-    libwvhidl \
-    liboemcrypto
 
