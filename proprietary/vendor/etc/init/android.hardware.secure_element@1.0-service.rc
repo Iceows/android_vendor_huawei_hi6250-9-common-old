@@ -1,4 +1,0 @@
-service secure_element_hal_service /vendor/bin/hw/android.hardware.secure_element@1.0-service.hisi
-    class hal
-    user secure_element
-    group secure_element system nfc
